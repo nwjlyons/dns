@@ -1,0 +1,31 @@
+<div id="header">
+  <div class="container">
+      <div class="grid">
+          <div class="unit span-grid">
+              <h1><a href=".">Domain Name Search</a></h1>
+              <input id="search" type="text" autocapitalize="off" autocorrect="off" ng-model="query" placeholder="search for a domain name">
+          </div>
+      </div>
+  </div>
+</div>
+<div id="content">
+  <div class="container">
+    <div class="grid">
+      <div class="unit span-grid">
+
+        <ul>
+            <li ng-repeat="result in results">
+                <a href="#/domains/{{ result.domain }}">{{ result.domain }}</a>
+                <span ng-switch on="result.availability" >
+                    <span ng-switch-when="available">&#x2714; {{ result.availability }}</span>
+                    <span ng-switch-when="taken">&#x2718; {{ result.availability }}</span>
+                    <span ng-switch-when="unavailable">&#x2718; {{ result.availability }}</span>
+                    <span ng-switch-default>{{ result.availability }}</span>
+                </span>
+            </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>

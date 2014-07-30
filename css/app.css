@@ -1,0 +1,96 @@
+/* app css stylesheet */
+
+html {
+    color:#323330;
+    font-family: Georgia, serif;
+    overflow-y: scroll;
+}
+
+h1, h2, h3, h4, h5, h6, .sans-serif {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+ul li, ol li {
+    margin-left:2rem;
+}
+
+a {
+    color:#d14314;
+}
+
+img {
+    width: 132%;
+    margin: 0 -16%;
+}
+
+blockquote {
+    border-left:.5rem solid #ddd;
+    margin-left:1rem;
+    padding-left:1rem;
+    margin-top: 3rem;
+}
+
+.unit {
+    overflow: visible;
+}
+
+.container {
+    max-width: 630px;
+    padding-top:.5rem;
+    padding-bottom: .5rem;
+}
+
+#header {
+    background: #F0DB4F
+}
+#header h1 {
+    font-size:1.5rem;
+    margin-bottom: .5rem
+}
+
+#header h1 a {
+    color:inherit;
+    text-decoration: none;
+}
+
+#header h1 a:hover {
+    text-decoration: underline;
+}
+
+#search {
+    width:100%;
+    border:1px solid #323330;
+    font-size:1.5rem;
+    padding:.5rem;
+    margin:0 0 0rem 0;
+    color:#323330;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+#search::-webkit-input-placeholder { /* WebKit browsers */
+    font-weight: normal;
+}
+#search:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-weight: normal;
+}
+#search::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-weight: normal;
+}
+#search:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-weight: normal;
+}
+
+@media screen and (max-width: 650px) {
+    img {
+        width:100%;
+        margin:0;
+    }
+
+    h1 {
+        font-size:2.2rem;
+    }
+}

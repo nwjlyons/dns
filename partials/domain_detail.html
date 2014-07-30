@@ -1,0 +1,39 @@
+<div id="header">
+  <div class="container">
+      <div class="grid">
+          <div class="unit span-grid">
+                <a href="{{ lastQueryURL }}">&larr; back</a>
+          </div>
+      </div>
+  </div>
+</div>
+<div id="content">
+  <div class="container">
+    <div class="grid">
+      <div class="unit span-grid">
+        <h1>{{ result.domain }}</h1>
+        <div ng-switch on="result.availability" >
+            <h2 ng-switch-when="available">Availability: &#x2714; {{ result.availability }}</h2>
+            <h2 ng-switch-when="taken">Availability: &#x2718; {{ result.availability }}</h2>
+            <h2 ng-switch-when="unavailable">Availability: &#x2718; {{ result.availability }}</h2>
+            <h2 ng-switch-default>Availability: {{ result.availability }}</h2>
+        </div>
+      </div>
+      <div class="unit one-of-two">
+          <h2>Research</h2>
+          <ul>
+              <li><a target="_blank" href="{{ result.www_url }}">Visit site</a></li>
+              <li><a target="_blank" href="{{ result.whois_url }}">Who is</a></li>
+          </ul>
+      </div>
+      <div class="unit one-of-two">
+          <h2>Registrars</h2>
+          <ul>
+              <li ng-repeat="registrar in result.registrars">
+                  <a target="_blank" href="{{ registrar.register_url }}">{{ registrar.name }}</a>
+              </li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
