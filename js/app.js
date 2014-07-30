@@ -5,8 +5,6 @@
 angular.module('myApp', [
   'ngRoute',
   'ngResource',
-  'myApp.filters',
-  'myApp.services',
   'myApp.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
