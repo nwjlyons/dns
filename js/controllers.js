@@ -37,15 +37,9 @@ angular.module('myApp.controllers', [])
       session.setQuery($routeParams.query)
     }
 
-    var wait;
     $scope.$watch('query', function(query){
-        if (wait) {
-            $timeout.cancel(wait);
-        }
-        wait = $timeout(function() {
-            search($scope.query)
-            session.setQuery($scope.query)
-        }, 250);
+        search($scope.query)
+        session.setQuery($scope.query)
     })
 
   }])
